@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_f6d3f6bd2a8a479bbe93aad3f48f49ad }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_d066aafeb8a248ed893c9b411f710ed6 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_551b65d33f904d2f8f4629a008cf092b }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_d0b2175b2c4d4f698120bbf0d35c9bba }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_f6d3f6bd2a8a479bbe93aad3f48f49ad }}/BankApp:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_551b65d33f904d2f8f4629a008cf092b }}/BankApp:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'app-bank'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_54c726c984304d72b15d5651c7e2b2d4 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_f6d3f6bd2a8a479bbe93aad3f48f49ad }}/BankApp:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0bce98116afb4161b3befea243249968 }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_551b65d33f904d2f8f4629a008cf092b }}/BankApp:${{ github.sha }}'
