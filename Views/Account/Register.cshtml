@@ -1,21 +1,32 @@
-﻿@{
+﻿@model RegisterViewModel
+@{
     ViewData["Title"] = "Abra sua conta";
 }
 
-<h1>Abra sua conta</h1>
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>@ViewData["Title"]</h2>
+        <form asp-action="Register">
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+</div>
 
-<form>
-    <div class="form-group">
-        <label for="inputNome">Nome:</label>
-        <input type="text" class="form-control" id="inputNome" placeholder="Seu nome">
-    </div>
-    <div class="form-group">
-        <label for="inputEmail">Email:</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Seu email">
-    </div>
-    <div class="form-group">
-        <label for="inputSenha">Senha:</label>
-        <input type="password" class="form-control" id="inputSenha" placeholder="Sua senha">
-    </div>
-    <button type="submit" class="btn btn-primary">Criar conta</button>
-</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

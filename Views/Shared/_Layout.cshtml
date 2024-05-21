@@ -6,28 +6,6 @@
     <title>BankApp</title>
     <link rel="stylesheet" href="~/css/site.css" />
     @RenderSection("styles", required: false)
-    <style>
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .user-info {
-            display: flex;
-            align-items: center;
-        }
-
-        .logout-btn {
-            padding: 5px 10px;
-            background-color: #dc3545;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 10px; /* Adicionando margem à esquerda */
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -49,8 +27,8 @@
                 }
                 else
                 {
-                    <a class="btn btn-primary btn-lg" href="/Account/Register" role="button">Abra sua Conta</a>
-                    <a class="btn btn-secondary btn-lg" href="/Account/Login" role="button">Login</a>
+                    <a href="/Account/Register" class="register-btn">Abra sua conta</a>
+                    <a href="/Account/Login" class="login-btn">Login</a>
                 }
             </div>
         </nav>
