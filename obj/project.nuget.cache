@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "h8SpFOd5rfKPInA446VSoo2DVNNYWaK9kZZeU7UHWb/41ebBwTFilgJBUZ/yMeKQAGJJSBHvwgmbjaCMqXl49g==",
+  "dgSpecHash": "dkFRsWFUGLmlnQTjvv2zj5DLsd8lVG2YGDsRSgEXjhD1cOvkgRMi5uD4ZRhqPAJ6W2cN1BawKEFwOMN0lIjIgg==",
   "success": true,
   "projectFilePath": "C:\\Users\\arrud\\source\\repos\\BankApp\\BankApp\\BankApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arrud\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\arrud\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\arrud\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512",
     "C:\\Users\\arrud\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\arrud\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.5\\microsoft.aspnetcore.cryptography.internal.8.0.5.nupkg.sha512",
     "C:\\Users\\arrud\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.5\\microsoft.aspnetcore.cryptography.keyderivation.8.0.5.nupkg.sha512",

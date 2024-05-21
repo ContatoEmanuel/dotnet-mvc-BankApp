@@ -1,17 +1,21 @@
-﻿@model BankApp.Models.User
+﻿@{
+    ViewData["Title"] = "Abra sua conta";
+}
 
-<form asp-action="Register">
+<h1>Abra sua conta</h1>
+
+<form>
     <div class="form-group">
-        <label asp-for="Username"></label>
-        <input asp-for="Username" class="form-control" />
+        <label for="inputNome">Nome:</label>
+        <input type="text" class="form-control" id="inputNome" placeholder="Seu nome">
     </div>
     <div class="form-group">
-        <label asp-for="Password"></label>
-        <input asp-for="Password" type="password" class="form-control" />
+        <label for="inputEmail">Email:</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Seu email">
     </div>
     <div class="form-group">
-        <label asp-for="Email"></label>
-        <input asp-for="Email" class="form-control" />
+        <label for="inputSenha">Senha:</label>
+        <input type="password" class="form-control" id="inputSenha" placeholder="Sua senha">
     </div>
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" class="btn btn-primary">Criar conta</button>
 </form>

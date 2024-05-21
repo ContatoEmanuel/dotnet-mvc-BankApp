@@ -1,0 +1,8 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityUser
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="user-info">
+        Bem-vindo, @Model.Email
+    </div>
+}
