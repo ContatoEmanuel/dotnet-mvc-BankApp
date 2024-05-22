@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Cartões";
+}
+
+<div class="hero">
+    <h1>Cartões</h1>
+    <p>Conheça nossos cartões de crédito e débito.</p>
+</div>
+
+<div class="services">
+    <div class="service" id="cartao-credito">
+        <h3 onclick ="toggleContent('cartao-credito')">Cartão de Crédito</h3>
+        <p>Solicite agora o seu cartão de crédito e aproveite diversos benefícios.</p>
+        <div class="content">
+            <p>Cartão de Crédito:</p>
+            <ul>
+                <li>Benefícios exclusivos</li>
+                <li>Programas de recompensas</li>
+                <li>Flexibilidade de pagamento</li>
+                <li>E mais!</li>
+            </ul>
+        </div>
+    </div>
+    <div class="service" id="cartao-debito">
+        <h3 onclick="toggleContent('cartao-debito')">Cartão de Débito</h3>
+        <p>Facilite suas compras e tenha controle total dos seus gastos.</p>
+        <div class="content">
+            <p>Cartão de Débito:</p>
+            <ul>
+                <li>Praticidade no dia a dia</li>
+                <li>Segurança nas transações</li>
+                <li>Acesso a promoções exclusivas</li>
+                <li>E mais!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <a class="btn btn-primary" href="/Account/Register" role="button">Solicitar Cartão</a>
+</div>
+
+<script>
+    function toggleContent(id) {
+        var services = document.getElementsByClassName('service');
+        var target = document.getElementById(id);
+
+        // Toggle the selected content
+        for (var i = 0; i < services.length; i++) {
+            if (services[i].id === id) {
+                services[i].classList.toggle('expanded');
+            } else {
+                services[i].classList.remove('expanded');
+            }
+        }
+    }
+</script>
