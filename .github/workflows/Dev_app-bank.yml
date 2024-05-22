@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_608c6382e4044606841f3875cd8ff7f4 }}/contatoemanuel/bankapp:${{ github.sha }}
+        tags: index.docker.io/contatoemanuel/bankapp:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'app-bank'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_329d34f5fcaa46baa3c6f109a7f888d3 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_608c6382e4044606841f3875cd8ff7f4 }}/contatoemanuel/bankapp:${{ github.sha }}'
+        images: 'index.docker.io/contatoemanuel/bankapp:${{ github.sha }}'
