@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Contas";
+}
+
+<div class="hero">
+    <h1>Contas Bancárias</h1>
+    <p>Escolha a conta que melhor se adequa às suas necessidades.</p>
+</div>
+
+<div class="services">
+    <div class="service" id="corrente">
+        <h3 onclick="toggleContent('corrente')">Conta Corrente</h3>
+        <div class="content">
+            <p>Ideal para o dia a dia, com serviços essenciais para movimentação financeira.</p>
+            <!-- Mais informações sobre conta corrente -->
+        </div>
+    </div>
+    <div class="service" id="poupanca">
+        <h3 onclick="toggleContent('poupanca')">Conta Poupança</h3>
+        <div class="content" style="display: none;">
+            <p>Uma opção segura para guardar seu dinheiro e ainda obter rendimentos mensais.</p>
+            <!-- Mais informações sobre conta poupança -->
+        </div>
+    </div>
+    <div class="service" id="salario">
+        <h3 onclick="toggleContent('salario')">Conta Salário</h3>
+        <div class="content" style="display: none;">
+            <p>Conta destinada ao recebimento de salários, com tarifas reduzidas e facilidades.</p>
+            <!-- Mais informações sobre conta salário -->
+        </div>
+    </div>
+</div>
+
+<div class="hero">
+    <a class="btn btn-primary btn-lg" href="/Account/Register" role="button">Abra sua Conta</a>
+</div>
+
+<style>
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .service {
+        flex: 1 0 300px; /* Define a largura mínima e máxima de cada serviço */
+        margin: 10px; /* Adiciona espaçamento entre os serviços */
+    }
+
+    .content {
+        display: none; /* O conteúdo é ocultado inicialmente */
+    }
+</style>
+
+ <script>
+    function toggleContent(id) {
+        var content = document.getElementById(id).getElementsByClassName('content')[0];
+        var services = document.getElementsByClassName('service');
+        
+        // Oculta todos os outros conteúdos
+        for (var i = 0; i < services.length; i++) {
+            if (services[i].id !== id) {
+                services[i].getElementsByClassName('content')[0].style.display = 'none';
+            }
+        }
+        
+        // Alterna a visibilidade do conteúdo clicado
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+        } else {
+            content.style.display = 'none';
+        }
+    }
+</script>
