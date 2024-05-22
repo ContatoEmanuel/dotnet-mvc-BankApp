@@ -8,17 +8,41 @@
 </div>
 
 <div class="services">
-    <div class="service">
+    <div class="service" id="contas" onclick="toggleContent('contas')">
         <h3><a href="/Accounts">Contas</a></h3>
         <p>Gerencie suas contas com facilidade e segurança.</p>
+        <div class="content">
+            <ul>
+                <li>Consulte saldos e extratos</li>
+                <li>Realize transferências</li>
+                <li>Pague contas e boletos</li>
+                <li>E muito mais!</li>
+            </ul>
+        </div>
     </div>
-    <div class="service">
+    <div class="service" id="cartoes" onclick="toggleContent('cartoes')">
         <h3>Cartões</h3>
         <p>Conheça nossos cartões de crédito e débito.</p>
+        <div class="content">
+            <ul>
+                <li>Cartões com benefícios exclusivos</li>
+                <li>Programas de recompensas</li>
+                <li>Controle total pelo aplicativo</li>
+                <li>E mais!</li>
+            </ul>
+        </div>
     </div>
-    <div class="service">
+    <div class="service" id="investimentos" onclick="toggleContent('investimentos')">
         <h3>Investimentos</h3>
         <p>Invista com a gente e veja seu dinheiro crescer.</p>
+        <div class="content">
+            <ul>
+                <li>Diversos tipos de investimento</li>
+                <li>Rentabilidade atrativa</li>
+                <li>Consultoria financeira</li>
+                <li>E mais!</li>
+            </ul>
+        </div>
     </div>
 </div>
 
@@ -31,3 +55,19 @@
         <p>"As melhores taxas de investimento." - João</p>
     </div>
 </div>
+
+<script>
+    function toggleContent(id) {
+        var services = document.getElementsByClassName('service');
+        var target = document.getElementById(id);
+
+        // Toggle the selected content
+        for (var i = 0; i < services.length; i++) {
+            if (services[i].id === id) {
+                services[i].classList.toggle('expanded');
+            } else {
+                services[i].classList.remove('expanded');
+            }
+        }
+    }
+</script>
