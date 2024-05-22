@@ -33,11 +33,11 @@ body {
     align-items: center;
 }
 
-.navbar a {
-    color: #ffffff;
-    margin: 0 1em;
-    text-decoration: none;
-}
+    .navbar a {
+        color: #ffffff;
+        margin: 0 1em;
+        text-decoration: none;
+    }
 
 .hero {
     background-color: var(--primary-color);
@@ -47,55 +47,71 @@ body {
     flex: 1;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin: 0.5em 0;
-}
+    .hero h1 {
+        font-size: 2.5em;
+        margin: 0.5em 0;
+    }
 
-.hero p {
-    font-size: 1.2em;
-}
+    .hero p {
+        font-size: 1.2em;
+    }
 
-.hero .btn {
-    margin: 0.5em;
-    padding: 1em 2em;
-    border-radius: 5px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
+    .hero .btn {
+        margin: 0.5em;
+        padding: 1em 2em;
+        border-radius: 5px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
 
-.hero .btn-primary {
-    background-color: var(--secondary-color);
-    color: #ffffff;
-}
+    .hero .btn-primary {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+    }
 
-.hero .btn-secondary {
-    background-color: #ffffff;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-}
+    .hero .btn-secondary {
+        background-color: #ffffff;
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+    }
 
 .services {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2em 0;
 }
 
 .service {
+    flex: 1 0 30%; /* Define a largura mínima e máxima de cada serviço */
+    margin: 10px; /* Adiciona espaçamento entre os serviços */
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 8px;
     padding: 1em;
     text-align: center;
-    width: 30%;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+    .service ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+        .service ul li {
+            margin-bottom: 5px;
+        }
+
+    .service.expanded {
+        flex: 1 0 100%; /* Ocupa toda a linha quando expandido */
+    }
+
+.content {
+    display: none; /* O conteúdo é ocultado inicialmente */
 }
 
-.service h3 {
-    color: var(--primary-color);
-}
-
-.service p {
-    color: var(--text-color);
+.service.expanded .content {
+    display: block; /* Mostra o conteúdo quando expandido */
 }
 
 .footer {
@@ -123,9 +139,9 @@ body {
     text-decoration: none;
 }
 
-.register-btn:hover, .login-btn:hover {
-    background-color: #004085;
-}
+    .register-btn:hover, .login-btn:hover {
+        background-color: #004085;
+    }
 
 .logout-btn {
     padding: 5px 10px;
@@ -137,9 +153,9 @@ body {
     margin-left: 10px;
 }
 
-.logout-btn:hover {
-    background-color: #c82333;
-}
+    .logout-btn:hover {
+        background-color: #c82333;
+    }
 
 .auth-container {
     display: flex;
@@ -159,10 +175,10 @@ body {
     text-align: center;
 }
 
-.auth-box h2 {
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
+    .auth-box h2 {
+        margin-bottom: 20px;
+        color: var(--text-color);
+    }
 
 .form-group {
     margin-bottom: 15px;
@@ -186,10 +202,10 @@ body {
     font-size: 16px;
 }
 
-.btn-primary:hover {
-    background-color: #c75109;
-    border-color: #a34007;
-}
+    .btn-primary:hover {
+        background-color: #c75109;
+        border-color: #a34007;
+    }
 
 .text-danger {
     color: #dc3545;
@@ -208,21 +224,21 @@ body {
     padding: 2em 0;
 }
 
-.cta-section .btn {
-    margin: 0.5em;
-    padding: 1em 2em;
-    border-radius: 5px;
-    text-transform: uppercase;
-    text-decoration: none;
-}
+    .cta-section .btn {
+        margin: 0.5em;
+        padding: 1em 2em;
+        border-radius: 5px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
 
-.cta-section .btn-primary {
-    background-color: var(--secondary-color);
-    color: #ffffff;
-}
+    .cta-section .btn-primary {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+    }
 
-.cta-section .btn-secondary {
-    background-color: #ffffff;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-}
+    .cta-section .btn-secondary {
+        background-color: #ffffff;
+        color: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+    }
