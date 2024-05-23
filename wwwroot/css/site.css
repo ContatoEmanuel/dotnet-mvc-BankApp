@@ -88,8 +88,6 @@ body {
         text-decoration: none; /* Remove o sublinhado */
     }
 
-
-
 /* Estilo para a lista expansível */
 .services {
     display: flex;
@@ -321,4 +319,39 @@ body {
 
     .no-bullets li {
         margin-bottom: 5px;
+    }
+
+/* Adicione isto ao seu arquivo CSS principal */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+    .contact-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .contact-form .form-control {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .contact-form .text-danger {
+        color: #d9534f;
+    }
+
+    .contact-form button {
+        background-color: #ff6600;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
     }
