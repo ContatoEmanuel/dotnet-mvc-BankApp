@@ -242,3 +242,57 @@ body {
         color: var(--secondary-color);
         border: 1px solid var(--secondary-color);
     }
+
+/* Adicione isso ao seu arquivo site.css */
+
+.investment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.investment {
+    width: 80%;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 1em;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .investment h3 {
+        margin: 0;
+        color: var(--primary-color);
+    }
+
+    .investment p {
+        margin: 0.5em 0;
+    }
+
+    .investment .content {
+        display: none;
+        margin-top: 1em;
+    }
+
+    .investment.expanded .content {
+        display: block;
+    }
+
+    .investment.expanded {
+        background-color: #f9f9f9;
+    }
+
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    .no-bullets li {
+        margin-bottom: 5px;
+    }

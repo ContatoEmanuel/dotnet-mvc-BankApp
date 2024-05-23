@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Accounts\yrri02lr.ioi~" />
     <None Remove="Views\Account\Register.cshtml~RFf30e69.TMP" />
   </ItemGroup>
 

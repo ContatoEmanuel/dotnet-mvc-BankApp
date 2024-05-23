@@ -1,0 +1,72 @@
+﻿@model List<BankApp.Models.Investments>
+
+@{
+    ViewData["Title"] = "Investimentos";
+}
+
+<div class="hero">
+    <h1>Investimentos</h1>
+    <p>Veja nossas opções de investimento e comece a fazer seu dinheiro render.</p>
+</div>
+
+<div class="investment-container">
+    <div class="investment" id="cdb">
+        <h3 onclick="toggleContent('cdb')">CDB (Certificado de Depósito Bancário)</h3>
+        <p>Invista em CDBs e tenha segurança com rendimentos previsíveis.</p>
+        <div class="content">
+            <ul class="no-bullets">
+                <li><strong>Rendimento:</strong> Atrelado ao CDI, com diversas opções de prazos e liquidez.</li>
+                <li><strong>Segurança:</strong> Garantido pelo FGC até R$ 250.000 por CPF.</li>
+                <li><strong>Flexibilidade:</strong> Escolha entre CDBs com liquidez diária ou no vencimento.</li>
+                <li><strong>Tributação:</strong> Imposto de Renda regressivo sobre os rendimentos.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="investment" id="tesouro-direto">
+        <h3 onclick="toggleContent('tesouro-direto')">Tesouro Direto</h3>
+        <p>Invista no Tesouro Direto e tenha segurança e rentabilidade.</p>
+        <div class="content">
+            <ul class="no-bullets">
+                <li><strong>Rendimento:</strong> Varia conforme o título, podendo ser prefixado, atrelado à inflação ou Selic.</li>
+                <li><strong>Segurança:</strong> Títulos emitidos pelo Governo Federal.</li>
+                <li><strong>Acessibilidade:</strong> Investimento inicial baixo, a partir de R$ 30,00.</li>
+                <li><strong>Liquidez:</strong> Venda disponível diariamente, com liquidação em D+1.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="investment" id="fundos-investimento">
+        <h3 onclick="toggleContent('fundos-investimento')">Fundos de Investimento</h3>
+        <p>Diversifique sua carteira com Fundos de Investimento.</p>
+        <div class="content">
+            <ul class="no-bullets">
+                <li><strong>Diversificação:</strong> Composição por diversos ativos, geridos por profissionais.</li>
+                <li><strong>Tipos:</strong> Fundos de renda fixa, multimercado, ações, entre outros.</li>
+                <li><strong>Liquidez:</strong> Varia conforme o fundo, podendo ter cotização de D+1 a D+30 ou mais.</li>
+                <li><strong>Tributação:</strong> Come-cotas semestral e IR sobre o ganho de capital no resgate.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="investment" id="acoes">
+        <h3 onclick="toggleContent('acoes')">Ações</h3>
+        <p>Invista em ações e tenha potencial de altos rendimentos.</p>
+        <div class="content">
+            <ul class="no-bullets">
+                <li><strong>Rendimento:</strong> Potencial de valorização e recebimento de dividendos.</li>
+                <li><strong>Risco:</strong> Alto, devido à volatilidade do mercado acionário.</li>
+                <li><strong>Liquidez:</strong> Alta, com negociação diária na bolsa de valores.</li>
+                <li><strong>Tributação:</strong> IR sobre ganho de capital e isenção para vendas até R$ 20.000/mês.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section">
+    <a class="btn btn-primary" href="/Account/Register" role="button">Investir Agora</a>
+</div>
+
+<script>
+    function toggleContent(id) {
+        var target = document.getElementById(id);
+        target.classList.toggle('expanded');
+    }
+</script>
