@@ -74,37 +74,63 @@ body {
         color: var(--secondary-color);
         border: 1px solid var(--secondary-color);
     }
+/* Define a cor laranja para os títulos h3 dentro da classe .service */
+.service h3 {
+    color: var(--primary-color); /* Substitua pelo valor hexadecimal da cor laranja desejada */
+}
 
+    /* Define a cor laranja para todos os estados dos links dentro dos títulos h3 */
+    .service h3 a:link,
+    .service h3 a:visited,
+    .service h3 a:hover,
+    .service h3 a:active {
+        color: var(--primary-color); /* Substitua pelo valor hexadecimal da cor laranja desejada */
+        text-decoration: none; /* Remove o sublinhado */
+    }
+
+
+
+/* Estilo para a lista expansível */
 .services {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 .service {
-    flex: 1 0 30%; /* Define a largura mínima e máxima de cada serviço */
-    margin: 10px; /* Adiciona espaçamento entre os serviços */
+    width: 80%;
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 8px;
+    margin: 10px 0;
     padding: 1em;
-    text-align: center;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    box-sizing: border-box;
 }
+
+    .service .content {
+        display: none;
+        margin-top: 1em;
+    }
+
+    .service.expanded .content {
+        display: block;
+    }
+
+    .service.expanded {
+        background-color: #f9f9f9;
+    }
+
     .service ul {
         list-style-type: none;
         padding-left: 0;
-        margin-top: 10px;
     }
 
         .service ul li {
             margin-bottom: 5px;
         }
 
-    .service.expanded {
-        flex: 1 0 100%; /* Ocupa toda a linha quando expandido */
-    }
 
 .content {
     display: none; /* O conteúdo é ocultado inicialmente */

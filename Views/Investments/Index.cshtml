@@ -10,8 +10,8 @@
 </div>
 
 <div class="investment-container">
-    <div class="investment" id="cdb">
-        <h3 onclick="toggleContent('cdb')">CDB (Certificado de Depósito Bancário)</h3>
+    <div class="investment" id="cdb" onclick="toggleContent('cdb')">
+        <h3>CDB (Certificado de Depósito Bancário)</h3>
         <p>Invista em CDBs e tenha segurança com rendimentos previsíveis.</p>
         <div class="content">
             <ul class="no-bullets">
@@ -22,8 +22,8 @@
             </ul>
         </div>
     </div>
-    <div class="investment" id="tesouro-direto">
-        <h3 onclick="toggleContent('tesouro-direto')">Tesouro Direto</h3>
+    <div class="investment" id="tesouro-direto" onclick="toggleContent('tesouro-direto')">
+        <h3>Tesouro Direto</h3>
         <p>Invista no Tesouro Direto e tenha segurança e rentabilidade.</p>
         <div class="content">
             <ul class="no-bullets">
@@ -34,8 +34,8 @@
             </ul>
         </div>
     </div>
-    <div class="investment" id="fundos-investimento">
-        <h3 onclick="toggleContent('fundos-investimento')">Fundos de Investimento</h3>
+    <div class="investment" id="fundos-investimento" onclick="toggleContent('fundos-investimento')">
+        <h3>Fundos de Investimento</h3>
         <p>Diversifique sua carteira com Fundos de Investimento.</p>
         <div class="content">
             <ul class="no-bullets">
@@ -46,8 +46,8 @@
             </ul>
         </div>
     </div>
-    <div class="investment" id="acoes">
-        <h3 onclick="toggleContent('acoes')">Ações</h3>
+    <div class="investment" id="acoes" onclick="toggleContent('acoes')">
+        <h3>Ações</h3>
         <p>Invista em ações e tenha potencial de altos rendimentos.</p>
         <div class="content">
             <ul class="no-bullets">
@@ -70,3 +70,13 @@
         target.classList.toggle('expanded');
     }
 </script>
+
+<style>
+    .content {
+        display: none;
+    }
+
+    .expanded .content {
+        display: block;
+    }
+</style>
