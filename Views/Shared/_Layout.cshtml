@@ -10,7 +10,11 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <div>
+            <div class="hamburger-menu">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            </div>
+            <input type="checkbox" id="menu-toggle" />
+            <div class="menu-items">
                 <a href="/">Home</a>
                 <a href="/Accounts">Contas</a>
                 <a href="/Cards">Cartões</a>
@@ -40,6 +44,20 @@
         <p>&copy; 2024 - BankApp</p>
     </footer>
     @RenderSection("scripts", required: false)
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var menuItems = document.querySelector('.menu-items');
 
+            // Adiciona um evento de clique ao documento inteiro
+            document.addEventListener('click', function (event) {
+                // Verifica se o clique não ocorreu dentro do menu de navegação
+                if (!menuItems.contains(event.target) && event.target !== menuToggle && menuToggle.checked) {
+                    // Fecha o menu se estiver aberto
+                    menuToggle.checked = false;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

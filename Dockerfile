@@ -25,3 +25,9 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "BankApp.dll"]
+
+# Desenvolvimento: compilar e servir o aplicativo diretamente
+FROM build AS dev
+WORKDIR /src
+COPY . .
+CMD ["dotnet", "watch", "run", "--urls", "http://0.0.0.0:8080"]

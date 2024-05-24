@@ -355,3 +355,63 @@ body {
         cursor: pointer;
         border-radius: 5px;
     }
+
+/* Estilos para o menu de navegação responsivo */
+.hamburger-menu {
+    display: block; /* Mostra o ícone de hamburguer em telas pequenas */
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px; /* Tamanho do ícone */
+    color: #fff; /* Cor do ícone */
+    padding: 10px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -300px; /* Esconde o menu fora da tela */
+    height: 100%;
+    width: 250px;
+    background-color: var(--secondary-color); /* Cor de fundo do menu azul */
+    transition: left 0.3s ease; /* Adiciona uma transição suave ao abrir/fechar o menu */
+}
+
+    .menu-items a {
+        display: block;
+        padding: 20px;
+        color: var(--primary-color); /* Cor do texto dos itens do menu (laranja) */
+        text-decoration: none;
+    }
+
+        .menu-items a:hover {
+            background-color: var(--background-color); /* Cor de fundo ao passar o mouse sobre os itens do menu */
+        }
+
+#menu-toggle:checked + .menu-items {
+    left: 0; /* Mostra o menu lateral ao clicar no ícone de hamburguer */
+}
+
+/* Estilo para o botão de logout e links de autenticação */
+.logout-btn, .register-btn, .login-btn {
+    background-color: var(--primary-color); /* Fundo dos botões laranja */
+    color: var(--background-color); /* Cor do texto dos botões */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+    .logout-btn:hover, .register-btn:hover, .login-btn:hover {
+        background-color: var(--text-color); /* Fundo dos botões laranja mais escuro ao passar o mouse */
+    }
+
+/* Oculta o checkbox */
+#menu-toggle {
+    display: none;
+}
